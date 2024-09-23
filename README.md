@@ -10,7 +10,7 @@ See [doc/README.md](doc/README.md), [doc/DeveloperGuide.md](doc/DeveloperGuide.m
 
 ### Sample Application
 
-[VectorWar UE5](https://github.com/BwdYeti/VectorWarUE5) is a port of the GGPO sample game VectorWar, using GGPOUE5 for netcode.
+[VectorWar UE5 (TBD)](https://github.com/BwdYeti/VectorWarUE4) is a port of the GGPO sample game VectorWar, using GGPOUE5 for netcode.
 
 ### Issues
 
