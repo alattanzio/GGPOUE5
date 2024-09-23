@@ -8,10 +8,6 @@
 #include "ggponet.h"
 #include "UObject/UObjectGlobals.h"
 
-#define ARRAYSIZE(a) sizeof(a) / sizeof(a[0])
-
-//UGGPONetworkAddress
-
 UGGPONetworkAddress* UGGPONetworkAddress::CreateNetworkAddress(UObject* Outer, const FName Name, const FString Address)
 {
     UGGPONetworkAddress* Result = NewObject<UGGPONetworkAddress>(Outer, Name);
@@ -19,7 +15,7 @@ UGGPONetworkAddress* UGGPONetworkAddress::CreateNetworkAddress(UObject* Outer, c
     const wchar_t* address = *Address;
 
     wchar_t WideIpBuffer[128];
-    uint32 WideIpBufferSize = (uint32)ARRAYSIZE(WideIpBuffer);
+    uint32 WideIpBufferSize = std::size(WideIpBuffer);
     // Check and get port
     if (swscanf_s(address, L"%[^:]:%hd", WideIpBuffer, WideIpBufferSize, &Result->Port) != 2) {
         Result->bValidAddress = false;
@@ -27,7 +23,7 @@ UGGPONetworkAddress* UGGPONetworkAddress::CreateNetworkAddress(UObject* Outer, c
     else
     {
         // Get address
-        wcstombs_s(nullptr, Result->IpAddress, ARRAYSIZE(Result->IpAddress), WideIpBuffer, _TRUNCATE);
+        wcstombs_s(nullptr, Result->IpAddress, std::size(Result->IpAddress), WideIpBuffer, _TRUNCATE);
     }
 
     return Result;
@@ -37,8 +33,8 @@ UGGPONetworkAddress* UGGPONetworkAddress::CreateLocalAddress(UObject* Outer, con
     UGGPONetworkAddress* Result = NewObject<UGGPONetworkAddress>(Outer, Name);
 
     Result->bValidAddress = true;
-    Result->Port = (uint16)LocalPort;
-    strcpy(Result->IpAddress, "127.0.0.1");
+    Result->Port = static_cast<uint16>(LocalPort);
+    strcpy_s(Result->IpAddress, "127.0.0.1");
 
     return Result;
 }

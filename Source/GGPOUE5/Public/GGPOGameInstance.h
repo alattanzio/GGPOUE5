@@ -19,10 +19,9 @@ class GGPOUE5_API UGGPOGameInstance : public UGameInstance
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		UGGPONetwork* NetworkAddresses;
+	UGGPONetwork* NetworkAddresses;
 
     /** Creates a collection of network addresses. */
     UFUNCTION(BlueprintCallable, Category = "GGPO")
-        void CreateNetwork(int32 NumPlayers, int32 PlayerIndex, int32 LocalPort, TArray<FString> RemoteAddresses);
-	
+    void CreateNetwork(int32 NumPlayers, int32 PlayerIndex, int32 LocalPort, TArray<FString> RemoteAddresses);
 };

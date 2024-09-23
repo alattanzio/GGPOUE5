@@ -5,8 +5,6 @@
  * in the LICENSE file.
  */
 
-#include "Core.h"
-
 #include "log.h"
 #include "types.h"
 

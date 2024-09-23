@@ -21,26 +21,26 @@ static const int UDP_SHUTDOWN_TIMER = 5000;
 static const int MAX_SEQ_DISTANCE = (1 << 15);
 
 UdpProtocol::UdpProtocol() :
-   _round_trip_time(0),
-   _kbps_sent(0),
-   _local_frame_advantage(0),
-   _remote_frame_advantage(0),
-   _queue(-1),
+   _udp(NULL),
    _magic_number(0),
+   _queue(-1),
    _remote_magic_number(0),
+   _connected(false),
+   _round_trip_time(0),
    _packets_sent(0),
    _bytes_sent(0),
+   _kbps_sent(0),
    _stats_start_time(0),
+   _local_frame_advantage(0),
+   _remote_frame_advantage(0),
    _last_send_time(0),
    _shutdown_timeout(0),
+   _disconnect_event_sent(false),
    _disconnect_timeout(0),
    _disconnect_notify_start(0),
    _disconnect_notify_sent(false),
-   _disconnect_event_sent(false),
-   _connected(false),
    _next_send_seq(0),
-   _next_recv_seq(0),
-   _udp(NULL)
+   _next_recv_seq(0)
 {
    _last_sent_input.init(-1, NULL, 1);
    _last_received_input.init(-1, NULL, 1);

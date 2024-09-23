@@ -39,24 +39,24 @@ public:
    };
 
 public:
-   Sync(UdpMsg::connect_status *connect_status);
+   explicit Sync(UdpMsg::connect_status *connect_status);
    virtual ~Sync();
 
    void Init(Config &config);
 
    void SetLastConfirmedFrame(int frame);
-   void SetFrameDelay(int queue, int delay);
+   void SetFrameDelay(int queue, int delay) const;
    bool AddLocalInput(int queue, GameInput &input);
-   void AddRemoteInput(int queue, GameInput &input);
-   int GetConfirmedInputs(void *values, int size, int frame);
-   int SynchronizeInputs(void *values, int size);
+   void AddRemoteInput(int queue, GameInput &input) const;
+   int GetConfirmedInputs(void *values, int size, int frame) const;
+   int SynchronizeInputs(void *values, int size) const;
 
    void CheckSimulation(int timeout);
    void AdjustSimulation(int seek_to);
    void IncrementFrame(void);
 
-   int GetFrameCount() { return _framecount; }
-   bool InRollback() { return _rollingback; }
+   int GetFrameCount() const { return _framecount; }
+   bool InRollback() const { return _rollingback; }
 
    bool GetEvent(Event &e);
 
@@ -77,12 +77,12 @@ protected:
 
    void LoadFrame(int frame);
    void SaveCurrentFrame();
-   int FindSavedFrameIndex(int frame);
+   int FindSavedFrameIndex(int frame) const;
    SavedFrame &GetLastSavedFrame();
 
    bool CreateQueues(Config &config);
-   bool CheckSimulationConsistency(int *seekTo);
-   void ResetPrediction(int frameNumber);
+   bool CheckSimulationConsistency(int *seekTo) const;
+   void ResetPrediction(int frameNumber) const;
 
 protected:
    GGPOSessionCallbacks _callbacks;

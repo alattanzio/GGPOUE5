@@ -41,8 +41,7 @@ SyncTestBackend::~SyncTestBackend()
 {
 }
 
-GGPOErrorCode
-SyncTestBackend::DoPoll(int timeout)
+GGPOErrorCode SyncTestBackend::DoPoll(int timeout)
 {
    if (!_running) {
       GGPOEvent info;
@@ -172,8 +171,7 @@ SyncTestBackend::RaiseSyncError(const char *fmt, ...)
    DebugBreak();
 }
 
-GGPOErrorCode
-SyncTestBackend::Logv(char *fmt, va_list list)
+GGPOErrorCode SyncTestBackend::Logv(const char *fmt, va_list list)
 {
    if (_logfp) {
       vfprintf(_logfp, fmt, list);

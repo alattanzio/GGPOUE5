@@ -1,8 +1,5 @@
 // Copyright 2020 BwdYeti.
 
-
-#include "Core.h"
-
 #include "GGPOGameInstance.h"
 #include "include/ggponet.h"
 

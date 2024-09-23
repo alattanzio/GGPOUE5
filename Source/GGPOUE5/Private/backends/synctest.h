@@ -15,14 +15,14 @@
 class SyncTestBackend : public IQuarkBackend {
 public:
    SyncTestBackend(GGPOSessionCallbacks *cb, char *gamename, int frames, int num_players);
-   virtual ~SyncTestBackend();
+   virtual ~SyncTestBackend() override;
 
-   virtual GGPOErrorCode DoPoll(int timeout);
-   virtual GGPOErrorCode AddPlayer(GGPOPlayer *player, GGPOPlayerHandle *handle);
-   virtual GGPOErrorCode AddLocalInput(GGPOPlayerHandle player, void *values, int size);
-   virtual GGPOErrorCode SyncInput(void *values, int size, int *disconnect_flags);
-   virtual GGPOErrorCode IncrementFrame(void);
-   virtual GGPOErrorCode Logv(char *fmt, va_list list);
+   virtual GGPOErrorCode DoPoll(int timeout) override;
+   virtual GGPOErrorCode AddPlayer(GGPOPlayer *player, GGPOPlayerHandle *handle) override;
+   virtual GGPOErrorCode AddLocalInput(GGPOPlayerHandle player, void *values, int size) override;
+   virtual GGPOErrorCode SyncInput(void *values, int size, int *disconnect_flags) override;
+   virtual GGPOErrorCode IncrementFrame() override;
+   virtual GGPOErrorCode Logv(const char *fmt, va_list list) override;
 
 protected:
    struct SavedInfo {
