@@ -1,6 +1,6 @@
 # GGPOUE5
 
-A port of [GGPO](http://ggpo.net) to an Unreal Engine 5 plugin.
+A port of [GGPO](http://ggpo.net) to an Unreal Engine 5.4 plugin.
 
 ## Setup & Usage
 
