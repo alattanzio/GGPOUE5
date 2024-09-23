@@ -13,7 +13,7 @@ class UGGPONetwork;
  * 
  */
 UCLASS()
-class GGPOUE4_API UGGPOGameInstance : public UGameInstance
+class GGPOUE5_API UGGPOGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 

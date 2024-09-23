@@ -1,12 +1,12 @@
 {
 	"FileVersion": 3,
-	"Version": 6,
-	"VersionName": "1.1",
-	"FriendlyName": "GGPOUE4",
-	"Description": "A port of the GGPO netcode library for UE4.",
+	"Version": 7,
+	"VersionName": "1.2",
+	"FriendlyName": "GGPOUE5",
+	"Description": "A port of the GGPO netcode library for UE5 by TonyCannon and BwdYeti",
 	"Category": "Netcode",
-	"CreatedBy": "BwdYeti",
-	"CreatedByURL": "http://bwdyeti.com",
+	"CreatedBy": "Antonio Lattanzio",
+	"CreatedByURL": "http://mentaldrink.com",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
@@ -16,7 +16,7 @@
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "GGPOUE4",
+			"Name": "GGPOUE5",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

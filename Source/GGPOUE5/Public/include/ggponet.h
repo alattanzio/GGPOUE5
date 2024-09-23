@@ -91,7 +91,7 @@ struct FGGPONetworkStats {
  * Composed of an ip address and a port.
  */
 UCLASS(Blueprintable)
-class GGPOUE4_API UGGPONetworkAddress : public UObject
+class GGPOUE5_API UGGPONetworkAddress : public UObject
 {
     GENERATED_BODY()
 
@@ -134,7 +134,7 @@ public:
  * A collection of network addresses.
  */
 UCLASS(Blueprintable)
-class GGPOUE4_API UGGPONetwork : public UObject
+class GGPOUE5_API UGGPONetwork : public UObject
 {
     GENERATED_BODY()
 
@@ -481,7 +481,7 @@ extern "C" {
 #endif
 
 
-class GGPOUE4_API GGPONet
+class GGPOUE5_API GGPONet
 {
 public:
     /*
