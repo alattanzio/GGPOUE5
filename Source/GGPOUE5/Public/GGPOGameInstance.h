@@ -12,7 +12,7 @@ class UGGPONetwork;
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class GGPOUE5_API UGGPOGameInstance : public UGameInstance
 {
 	GENERATED_BODY()

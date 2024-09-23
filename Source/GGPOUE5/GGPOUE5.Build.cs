@@ -26,7 +26,7 @@ public class GGPOUE5 : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] { "CoreUObject", "Engine", "InputCore" });
 
 
-		if (Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTargetPlatform.Win32)
+		if (Target.Platform == UnrealTargetPlatform.Win64)
 		{
 			PublicDefinitions.Add("_WINDOWS");
 		}
@@ -34,7 +34,7 @@ public class GGPOUE5 : ModuleRules
         {
 			PublicDefinitions.Add("MACOS");
 		}
-		else if (Target.Platform == UnrealTargetPlatform.Linux || Target.Platform == UnrealTargetPlatform.LinuxAArch64)
+		else if (Target.Platform == UnrealTargetPlatform.Linux)
         {
 			PublicDefinitions.Add("__GNUC__");
 		}

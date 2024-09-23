@@ -5,6 +5,8 @@
  * in the LICENSE file.
  */
 
+#include "Core.h"
+
 #include "bitvector.h"
 #include "types.h"
 

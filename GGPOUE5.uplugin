@@ -1,24 +1,17 @@
 {
 	"FileVersion": 3,
-	"Version": 7,
-	"VersionName": "1.2",
+	"Version": 1,
+	"VersionName": "1.0",
 	"FriendlyName": "GGPOUE5",
-	"Description": "A port of the GGPO netcode library for UE5 by TonyCannon and BwdYeti",
-	"Category": "Netcode",
+	"Description": "",
+	"Category": "Other",
 	"CreatedBy": "Antonio Lattanzio",
-	"CreatedByURL": "http://mentaldrink.com",
+	"CreatedByURL": "",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
-	"Installed": false,
-	"Modules": [
-		{
-			"Name": "GGPOUE5",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	]
+	"Installed": false
 }

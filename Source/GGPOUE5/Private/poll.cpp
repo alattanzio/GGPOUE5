@@ -5,6 +5,8 @@
  * in the LICENSE file.
  */
 
+#include "Core.h"
+
 #include "poll.h"
 #include "types.h"
 
